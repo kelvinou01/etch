@@ -1,0 +1,5 @@
+<h3>{{ .Title }}</h3>
+{{ .Content }}
+<ul id="posts">
+	{{- range where site.RegularPages "Type" "==" "simple-questions" }} {{ .Render "li" }} {{- end }}
+</ul>
